@@ -21,8 +21,13 @@ const theader = [
         value: '4',
     },
     {
-        name: 'Acciones',
+        name: 'Rangos de Temperatura',
         value: '5',
+    },
+    
+    {
+        name: 'Acciones',
+        value: '6',
     }
 
 
@@ -35,6 +40,7 @@ const tbody = [
         name: 'COVID-19',
         responsible: 'Juan Pérez',
         vaccine: 'COVID-19',
+        rangeTemperature: '20°C - 40°C',
         actionEdit: true,
         actionDelete: true,
     },
@@ -43,6 +49,7 @@ const tbody = [
         name: 'Hepatitis A',
         responsible: 'María García',
         vaccine: 'Hepatitis A',
+        rangeTemperature: '25°C - 30°C',
         actionEdit: true,
         actionDelete: true,
     }
@@ -94,6 +101,7 @@ function Vaccine() {
                                     <td className="py-2 px-4 border-b">{item.name}</td>
                                     <td className="py-2 px-4 border-b">{item.responsible}</td>
                                     <td className="py-2 px-4 border-b">{item.vaccine}</td>
+                                    <td className="py-2 px-4 border-b">{item.rangeTemperature}</td>
                                     <td
                                         className="py-2 px-4 border-b flex">
                                         <button

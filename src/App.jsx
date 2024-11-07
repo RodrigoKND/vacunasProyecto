@@ -10,7 +10,7 @@ import Support from './pages/Dashboard/Support/Support'
 import VaccineEsp32Management from './pages/Dashboard/Vaccine&Esp32/VaccineEsp32Management'
 import DetailsEsp32 from './pages/Dashboard/DetailsEsp32/DetailsEsp32'
 import DetailsEsp32Temperature from './pages/Dashboard/DetailsEsp32Temperature/DetailsEsp32Temperature'
-
+import UsersManagement from './pages/Dashboard/UsersManagement/UsersManagement'
 import './App.css'
 
 function App() {
@@ -36,6 +36,7 @@ function AppContent() {
           <Route path="/management" element={<VaccineEsp32Management />} />
           <Route path="/history" element={<History />} />
           <Route path="/alarms" element={<Alarms />} />
+          <Route path="/users" element={<UsersManagement />} />
           <Route path="/config" element={<Configuration />} />
           <Route path="/reports" element={<Reports />} />
           <Route path="/support" element={<Support />} />

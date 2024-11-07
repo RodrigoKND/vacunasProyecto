@@ -3,6 +3,7 @@ import { Link } from "react-router-dom"
 import {
     Battery100Icon, BellAlertIcon, ChartBarSquareIcon, ClipboardDocumentCheckIcon,
     ClockIcon, Cog6ToothIcon, DocumentMagnifyingGlassIcon, QuestionMarkCircleIcon,
+    UserCircleIcon,
 } from "@heroicons/react/24/outline"
 
 const navigation = [
@@ -29,6 +30,12 @@ const navigation = [
         label: "Alarmas y Notificaciones",
         key: "alarms",
         basename: "/alarms"
+    },
+    {
+        icon: <UserCircleIcon className="h-6 w-6 me-2" />,
+        label: "Gestión de Usuarios",
+        key: "users",
+        basename: "/users"
     },
     {
         icon: <Cog6ToothIcon className="h-6 w-6 me-2" />,

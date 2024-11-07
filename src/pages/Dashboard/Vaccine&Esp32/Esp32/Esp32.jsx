@@ -26,8 +26,12 @@ const theader = [
         value: '5',
     },
     {
-        name: 'Detalles',
+        name: 'Temperatura Actual',
         value: '6',
+    },
+    {
+        name: 'Detalles',
+        value: '7',
     }
 
 
@@ -40,14 +44,16 @@ const tbody = [
         name: 'ESP-A',
         responsible: 'Carlos Rodriguez',
         vaccine: 'Covid 19',
-        rangeTemperature: '20°C - 40°C'
+        rangeTemperature: '20°C - 40°C',
+        temperature: '22°C'
     },
     {
         ID: 'ESP-02',
         name: 'ESP-B',
         responsible: 'Maria Garcia',
         vaccine: 'Hepatitis B',
-        rangeTemperature: '25°C - 30°C'
+        rangeTemperature: '25°C - 30°C',
+        temperature: '30°C'
     }
 ]
 
@@ -98,6 +104,8 @@ function Esp32() {
                                     <td className="py-2 px-4 border-b">{item.responsible}</td>
                                     <td className="py-2 px-4 border-b">{item.vaccine}</td>
                                     <td className="py-2 px-4 border-b">{item.rangeTemperature}</td>
+                                    <td className="py-2 px-4 border-b">{item.temperature}</td>
+
                                     <td className="py-2 px-4 border-b flex justify-center">
                                         <Link to={`/esp32/${item.name}`}>
                                             <ArrowRightCircleIcon className="h-8 w-8 hover:text-blue-500 rounded-full" />
