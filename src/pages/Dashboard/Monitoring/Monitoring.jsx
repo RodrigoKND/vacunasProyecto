@@ -12,7 +12,7 @@ const temperatureData = [
 
 const recentAlerts = [
     { id: 1, device: 'ESP32-A1', type: 'Temperatura Alta', time: '10:30 AM' },
-    { id: 2, device: 'ESP32-C3', type: 'Batería Baja', time: '11:45 AM' },
+    { id: 2, device: 'ESP32-C3', type: 'Bateria Baja', time: '11:45 AM' },
     { id: 3, device: 'ESP32-B2', type: 'Conexión Perdida', time: '02:15 PM' },
 ]
 
@@ -138,9 +138,10 @@ function Monitoring() {
                     </table>
                 </div>
             </div>
+
             <div className="bg-white p-4 rounded-lg shadow-lg">
                 <header className="mb-4">
-                    <h2 className="text-lg font-semibold">Resumen de Estado ESP32</h2>
+                    <h2 className="text-lg font-semibold">Resumen de Estado de las ESP32</h2>
                     <p className="text-gray-500 text-sm">Distribución del estado de los dispositivos</p>
                 </header>
                 <div className="flex justify-between items-center">

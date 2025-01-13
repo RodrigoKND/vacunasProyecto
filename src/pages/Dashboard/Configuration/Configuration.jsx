@@ -27,6 +27,15 @@ function Configuration() {
                                 <option value="fahrenheit">Fahrenheit (°F)</option>
                             </select>
                         </div>
+                        <div>
+                            <label htmlFor="esp-config" className="font-medium">Seleccionar Esp32</label>
+                            <select id="esp-config"
+                                className="border cursor-pointer border-solid border-gray-300 rounded-lg shadow-sm px-4 py-2 w-full">
+                                <option value="Todo">Todo</option>
+                                <option value="Esp-32-A">Esp32-A</option>
+                                <option value="Esp-32-B">Esp32-B</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
 

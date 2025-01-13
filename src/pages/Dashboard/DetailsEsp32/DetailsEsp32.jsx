@@ -16,8 +16,8 @@ function DetailsEsp32() {
     const espName = param.name
     return (
         <>
-            <header className='mb-6'>
-                <div className='mb-6'>
+            <header className='mb-2'>
+                <div className='mb-3'>
                     <Link to='/management'>
                         <ArrowLeftIcon className='w-6 h-6 text-gray-500' />
                     </Link>
@@ -25,14 +25,14 @@ function DetailsEsp32() {
                 <h2 className="text-3xl font-semibold">{espName}</h2>
             </header>
 
-            <div className='flex flex-col lg:flex-row gap-4 mb-4 w-full'>
+            <div className='flex flex-col lg:flex-row items-baseline gap-4 mb-4 w-full'>
                 <article className="bg-white lg:w-2/4 w-full rounded-lg shadow-md cursor-pointer">
-                    <Link to={`/temperature/${espName}`}>
+                    <Link to={`/temperature/${espName}`} className='h-full'>
                         <div className='p-6'>
                             <h3 className="text-2xl font-semibold">Temperatura</h3>
                             <p className="text-gray-500 text-sm mt-2">Últimas 24 horas</p>
                         </div>
-                        <div className='h-[350px] p-2'>
+                        <div className='h-[350px] px-2 py-3'>
                             <ResponsiveContainer width="100%" height="100%">
                                 <BarChart data={temperatureData}
                                     margin={{ top: 0, right: 0, left: 0, bottom: 0 }}>
@@ -47,9 +47,9 @@ function DetailsEsp32() {
                     </Link>
                 </article>
 
-                <div className="grid grid-cols-1 gap-6 md:grid-cols-2 w-full lg:grid-cols-2 mb-6">
+                <div className="grid grid-cols-1 items-baseline gap-6 md:grid-cols-2 w-full lg:grid-cols-2 mb-6">
                     <div
-                        className="bg-white rounded-lg col-span-12 lg:col-span-6 shadow-md p-6 flex flex-col items-center">
+                        className="bg-white h-full rounded-lg col-span-12 lg:col-span-6 shadow-md p-6 flex flex-col items-center">
                         <h3 className="text-2xl font-semibold">Temperatura Actual</h3>
                         <p className="text-gray-500 text-sm my-2">Monitoreo en Tiempo Real</p>
                         <div className="text-4xl font-bold text-blue-600 lg:mt-6">2.8°C</div>
@@ -86,7 +86,7 @@ function DetailsEsp32() {
                         </div>
                     </div>
 
-                    <div className="bg-white rounded-lg col-span-12 shadow-md p-6">
+                    <div className="bg-white rounded-lg col-span-12 shadow-md px-6 py-4">
                         <header className='flex items-center justify-between w-full'>
                             <h3 className="text-sm font-medium">ESP32-A1</h3>
                             <p className="text-sm font-bold">ESP32-001</p>

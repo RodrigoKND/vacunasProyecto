@@ -7,13 +7,6 @@ function Support() {
                 </header>
                 <div className="space-y-4 mb-6">
                     <div>
-                        <label htmlFor="description-problem" className="font-medium">Descripción del Problema</label>
-                        <input type="text"
-                            id="description-problem"
-                            className="w-full text-gray-700 border border-solid border-gray-300 rounded-lg shadow-sm px-4 py-2"
-                        />
-                    </div>
-                    <div>
                         <label htmlFor="type-report" className="font-medium">Prioridad</label>
                         <select id="type-report"
                             className="border border-solid border-gray-300 rounded-lg shadow-sm px-4 py-2 w-full">
@@ -24,11 +17,20 @@ function Support() {
                             <option value="Crítica">Crítica</option>
                         </select>
                     </div>
-                </div>
+                    <div>
+                        <label htmlFor="description-problem" className="font-medium">Descripción del Problema</label>
+                        <textarea rows={5} type="text"
+                            id="description-problem"
+                            className="w-full resize-none text-gray-700 border border-solid border-gray-300 rounded-lg shadow-sm px-4 py-2"
 
-                <button className="bg-black text-white font-medium rounded-lg px-4 py-2">
-                    Enviar Solicitud de Reporte
-                </button>
+                        ></textarea>
+                    </div>
+                </div>
+                <div className="flex justify-end">
+                    <button className="bg-black text-white font-medium rounded-lg px-4 py-2">
+                        Enviar Solicitud de Reporte
+                    </button>
+                </div>
             </form>
 
             <div className="bg-white rounded-lg shadow-md p-6 w-auto mb-6">

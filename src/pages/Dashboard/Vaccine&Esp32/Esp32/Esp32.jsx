@@ -99,7 +99,7 @@ function Esp32() {
                         {
                             tbody.map((item, index) => (
                                 <tr key={index} className="hover:bg-gray-100 cursor-pointer text-center">
-                                    <td className="py-2 px-4 border-b">{item.ID}</td>
+                                    <td className="p-2 border-b">{item.ID}</td>
                                     <td className="py-2 px-4 border-b">{item.name}</td>
                                     <td className="py-2 px-4 border-b">{item.responsible}</td>
                                     <td className="py-2 px-4 border-b">{item.vaccine}</td>

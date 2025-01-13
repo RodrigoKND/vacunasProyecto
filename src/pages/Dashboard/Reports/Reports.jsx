@@ -25,7 +25,6 @@ const theader = [
 
 ]
 
-
 const tbody = [
     {
         date: '28/05/2022',
@@ -93,7 +92,7 @@ function Reports() {
                     </div>
                 </div>
 
-                <button className="bg-black text-white font-medium rounded-lg px-4 py-2">
+                <button type="submit" className="bg-black text-white font-medium rounded-lg px-4 py-2">
                     Generar Reporte
                 </button>
             </form>
