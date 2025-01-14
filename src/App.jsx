@@ -1,22 +1,25 @@
-import { HashRouter, Route, Routes, useLocation } from 'react-router-dom'
-import Login from './pages/Auth/Login/Login'
-import SideBar from './components/SideBar/SideBar'
-import Monitoring from './pages/Dashboard/Monitoring/Monitoring'
-import History from './pages/Dashboard/History/History'
-import Alarms from './pages/Dashboard/Alarms/Alarms'
-import Configuration from './pages/Dashboard/Configuration/Configuration'
-import Reports from './pages/Dashboard/Reports/Reports'
-import Support from './pages/Dashboard/Support/Support'
-import VaccineEsp32Management from './pages/Dashboard/Vaccine&Esp32/VaccineEsp32Management'
-import DetailsEsp32 from './pages/Dashboard/DetailsEsp32/DetailsEsp32'
-import DetailsEsp32Temperature from './pages/Dashboard/DetailsEsp32Temperature/DetailsEsp32Temperature'
-import UsersManagement from './pages/Dashboard/UsersManagement/UsersManagement'
-import './App.css'
+import { HashRouter, Route, Routes, useLocation } from "react-router-dom";
+import Login from "./pages/Auth/Login/Login";
+import SideBar from "./components/SideBar/SideBar";
+import Monitoring from "./pages/Dashboard/Monitoring/Monitoring";
+import History from "./pages/Dashboard/History/History";
+import Alarms from "./pages/Dashboard/Alarms/Alarms";
+import Configuration from "./pages/Dashboard/Configuration/Configuration";
+import Reports from "./pages/Dashboard/Reports/Reports";
+import Support from "./pages/Dashboard/Support/Support";
+import VaccineEsp32Management from "./pages/Dashboard/Vaccine&Esp32/VaccineEsp32Management";
+import DetailsEsp32 from "./pages/Dashboard/DetailsEsp32/DetailsEsp32";
+import DetailsEsp32Temperature from "./pages/Dashboard/DetailsEsp32Temperature/DetailsEsp32Temperature";
+import UsersManagement from "./pages/Dashboard/UsersManagement/UsersManagement";
+import { AuthProvider } from "./context/AuthContext";
+import "./App.css";
 
 function App() {
   return (
     <HashRouter>
-      <AppContent />
+      <AuthProvider>
+        <AppContent />
+      </AuthProvider>
     </HashRouter>
   );
 }
@@ -41,11 +44,14 @@ function AppContent() {
           <Route path="/reports" element={<Reports />} />
           <Route path="/support" element={<Support />} />
           <Route path="/esp32/:name" element={<DetailsEsp32 />} />
-          <Route path="/temperature/:esp32name" element={<DetailsEsp32Temperature />} />
+          <Route
+            path="/temperature/:esp32name"
+            element={<DetailsEsp32Temperature />}
+          />
         </Routes>
       </div>
     </section>
   );
 }
 
-export default App
+export default App;
